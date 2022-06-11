@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //hello
-    alert("hello");
+    //alert("hello");
     keyPressed();
     
     
@@ -17,3 +17,12 @@ function keyPressed(){
         }
     });
 };
+
+function showCampus(){
+    $("#campus").removeClass("d-none");
+}
+
+function showMappa(){
+    $("#mappa").toggleClass("d-none");
+    //addClass()
+}

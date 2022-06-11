@@ -20,9 +20,20 @@
     </head>
     <body>
         <div id="app">
-            <h2>
-                <a href="./foo.html">Foo</a>
-            </h2>
+            <div id="introduzione" class="d-block">
+                <p>introduzione</p>
+            </div>
+            <div><button type="button" class="btn-primary" onClick="showCampus()">Show div Campus!!</button>
+            <br><br>
+            <button type="button" class="btn-primary" onClick="showMappa()">Show div Mappa</button><br><br></div>
+            <div id="campus" class="d-none">
+                <p>campus</p>
+                <h3>CIAO</h3>
+            </div>
+            
+            <div id="mappa" class="d-none">
+                <img src="./mappa.jpeg" alt="mapppa">
+            </div>
         </div>
 
         <script src="./script.js"></script>
