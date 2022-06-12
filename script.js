@@ -18,6 +18,7 @@ function keyPressed(){
     });
 };
 
+//foo.html
 function showCampus(){
     $("#campus").removeClass("d-none");
 }
