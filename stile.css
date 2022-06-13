@@ -36,6 +36,6 @@ p {
     width: 30%;
     display: block;
     padding: 2rem 0;
-    position: absolute;
+    position: -webkit-sticky;
     bottom: 0;
 }
