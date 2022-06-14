@@ -25,7 +25,7 @@
                     <div class="card-header" id="headingOne">
                         <h5 class="mb-0 text-start">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" id="One">
                                 ICT: Innovazione Sociale, Comunicazione e Nuove Tecnologie
                             </button>
                         </h5>
@@ -45,14 +45,14 @@
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" id="Two">
                                 Cosa si studia a ICT
                             </button>
                         </h5>
                     </div>
                     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-toggle="#accordion">
                         <div class="card-body">
-                            <img src="./img/lezione.jpg" alt="campus">
+                            <img src="./img/aulamagna.jpeg" alt="campus">
                             <p>
                                 Ciò che distingue ICT dagli altri corsi è la sua multidisciplinarietà. Gli studenti non avranno solamente una
                                 buona base informatica, ma anche un’ampia visione sugli aspetti in ambito socio-economico e giurisprudenziale.
@@ -64,14 +64,14 @@
                     <div class="card-header" id="headingThree">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" id="Three">
                                 Percorso Formativo
                             </button>
                         </h5>
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-toggle="#accordion">
                         <div class="card-body">
-                            <img src="./img/innovazione.jpg" alt="campus">
+                            <img src="./img/profili.jpeg" alt="campus">
                             <p>
                                 ICT è in grado di formare profili capaci di sviluppare tecnologie informatiche che soddisfino i bisogni degli utenti e
                                 dei mercati in ottica inclusiva e trasversale. In particolare potrai specializzarti come:
@@ -86,14 +86,14 @@
                     <div class="card-header" id="headingFour">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" id="Four">
                                 Materie Caratterizzanti
                             </button>
                         </h5>
                     </div>
                     <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-bs-toggle="#accordion">
                         <div class="card-body">
-                            <img src="./img/materie-caratterizzanti.png" alt="campus">
+                            <img src="./img/materie.jpeg" alt="campus">
                             <p>
                                 Le quattro materie caratterizzanti sono: Economia, Diritto, Informatica, Sociologia.
                                 Oltre agli esami obbligatori, il terzo anno ci sono degli esami a scelta specializzati in base ai propri interessi.
@@ -107,7 +107,7 @@
                     <div class="card-header" id="headingFive">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" id="Five">
                                 Sbocchi Professionali
                             </button>
                         </h5>
@@ -127,7 +127,7 @@
                     <div class="card-header" id="headingSix">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" id="Five">
                                 Il Campus
                             </button>
                         </h5>
@@ -147,7 +147,7 @@
                     <div class="card-header" id="headingSeven">
                         <h5 class="mb-0">
                             <button type="button" class="btn btn-link collapsed" data-bs-toggle="collapse"
-                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven" id="Seven">
                                 Contatti
                             </button>
                         </h5>
@@ -170,6 +170,30 @@
         </div>
 
 
+        <script>
+            $(document).ready(function(){
+
+                //button select dinamically
+                /*
+                $("button[data-bs-target|='#collapse']").on("click", function(){
+                    
+                });
+                */
+
+                $(document).on("click","[data-bs-target^='#collapse']", function () {
+
+                    var numero = $(this).attr("id");
+                    var heading = "heading";
+                    var idcard = "#" + heading + numero;
+
+                    //animazione apertura card
+                    $("html, body").animate({
+                        scrollTop: $(idcard).offset().top
+                    }, 1000);
+                });
+                
+            });
+        </script>
         <!--separate popper and bootstrap js-->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
             integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
