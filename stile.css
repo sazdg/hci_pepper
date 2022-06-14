@@ -11,6 +11,10 @@ body {
     font-size: 1.5em;
 }
 
+.btn-link:hover {
+    color: #fff;
+}
+
 img {
     width: 100%;
 }
@@ -28,14 +32,20 @@ img {
     padding: 0;
 }
 
+.btn-link {
+    text-align: start;
+}
+
 p {
     padding: 1rem;
 }
 
-#img-footer {
+.footer {
     width: 30%;
+    margin: auto;
     display: block;
     padding: 2rem 0;
-    position: -webkit-sticky;
+    position: relative;
     bottom: 0;
+    text-align: center;
 }
