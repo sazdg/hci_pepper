@@ -15,8 +15,19 @@ body {
     color: #fff;
 }
 
-img {
+.img-card {
     width: 100%;
+}
+.img-logos {
+    margin: 2rem 1rem;
+}
+.link-logos {
+    color: #000;
+    text-decoration: none;
+}
+.link-logos:hover {
+    color: #000;
+    text-decoration: underline;
 }
 
 .card-header {
